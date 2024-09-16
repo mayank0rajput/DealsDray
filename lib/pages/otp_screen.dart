@@ -81,7 +81,7 @@ class _OtpScreenState extends State<OtpScreen> {
     try {
       if (response.statusCode == 200) {
         print('Response: ${response.body}');
-        Navigator.pushReplacementNamed(context, MyRoutes.homeRoute);
+        Navigator.pushReplacementNamed(context, MyRoutes.registerScreen);
       } else {
         print('Status Code: ${response.statusCode}');
         print('Reason: ${response.reasonPhrase}');
@@ -144,7 +144,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       onCompleted: (value) {
                         debugPrint(value);
                         // _sendOTPData(); API NOT WORKING
-                        Navigator.pushReplacementNamed(context, MyRoutes.homeRoute);
+                        Navigator.pushReplacementNamed(context, MyRoutes.registerScreen);
                       },
                     ),
                     const SizedBox(
