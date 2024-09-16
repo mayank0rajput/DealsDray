@@ -1,4 +1,6 @@
 import 'package:dealsdray_assignment/pages/home_screen.dart';
+import 'package:dealsdray_assignment/pages/login_screen.dart';
+import 'package:dealsdray_assignment/pages/otp_screen.dart';
 import 'package:dealsdray_assignment/pages/splash_screen.dart';
 import 'package:dealsdray_assignment/utils/routes.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splashScreen',
       routes: {
         MyRoutes.splashScreen :(context) => SplashScreen(),
-        MyRoutes.homeRoute :(context) => HomeScreen()
+        MyRoutes.login : (context) => LoginScreen(),
+        MyRoutes.otpScreen : (context) => OtpScreen(phoneNumber: '9011470243'),
+        MyRoutes.homeRoute :(context) => HomeScreen(),
       },
     );
   }
